@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>DodajODP</servlet-name>
+        <servlet-class>DodajODP</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DodajODP</servlet-name>
+        <url-pattern>/DodajODP.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Szczegoly</servlet-name>
+        <servlet-class>Szczegoly</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Szczegoly</servlet-name>
+        <url-pattern>/Szczegoly.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Rejestracja</servlet-name>
+        <servlet-class>Rejestracja</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Rejestracja</servlet-name>
+        <url-pattern>/Rejestracja.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Logowanie</servlet-name>
+        <servlet-class>Logowanie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logowanie</servlet-name>
+        <url-pattern>/Logowanie.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Wyloguj</servlet-name>
+        <servlet-class>Wyloguj</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Wyloguj</servlet-name>
+        <url-pattern>/Wyloguj.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DodajP</servlet-name>
+        <servlet-class>DodajP</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>FacesServlet</display-name>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DodajP</servlet-name>
+        <url-pattern>/DodajP.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>number</param-name>
+        <param-value>3</param-value>
+    </context-param>
+    <listener>
+        <listener-class>aplikacja.LiczbaZalogowanych</listener-class>
+    </listener>
+
+
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>client</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>javax.faces.application.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/faces-config.xml</param-value>
+    </context-param>
+
+
+
+    <!-- Faces Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
